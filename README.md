@@ -11,7 +11,8 @@
  - 4. e.g.
        - qsub -q work tesh.sh
        - qdel 1234
-       - qstat 
+       - qstat
+
   
 ## [SLURM](https://slurm.schedmd.com/documentation.html)
  - 1. sbatch (提交任务)
@@ -24,3 +25,8 @@
        - sbatch -p work tesh.sh
        - scancel 1234
        - squeue
+```shell
+#SBATCH -p cpu
+#SBATCH -J Run
+#SBATCH -N 1
+```
