@@ -26,7 +26,7 @@
 #PBS -l nodes=1
 #PBS -t 7-00:00:00  #最大运行时间7天0h0min0s
 
-sbatch run.sh
+qsub run.sh
 ```
   
 ## [SLURM](https://slurm.schedmd.com/documentation.html)
