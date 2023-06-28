@@ -10,6 +10,7 @@
       - [批量取消](./Script)  
  - 3. qstat (查看任务状态)
  - 4. e.g.
+   - 终端命令
        ```shell
        qsub -q work tesh.sh
        ```
@@ -19,6 +20,7 @@
        ```shell
        qstat
        ```
+   - bash脚本
 ```shell
 #!/bin/bash
 #PBS -q cpu
@@ -40,6 +42,7 @@ qsub run.sh
  - 2. scancel JobId (取消任务) 
  - 3. squeue (查看任务状态)
  - 4. [e.g.](http://faculty.bicmr.pku.edu.cn/~wenzw/pages/slurm.html)
+   - 终端命令
       ```shell
       sbatch -p work tesh.sh
       ```
@@ -49,6 +52,7 @@ qsub run.sh
       ```shell
       squeue
       ```
+   - bash脚本
 ```shell
 #!/bin/bash
 #SBATCH -p cpu
