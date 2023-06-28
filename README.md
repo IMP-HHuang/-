@@ -69,6 +69,9 @@ sbatch run.sh
 OPEN(999,FILE="Run.sh")
 WRITE(999,'1a11')"#!/bin/bash"
 WRITE(999,'1a14')"#SBATCH -p cpu
+
+WRITE(999,*)"cd WorkingDirectory"
+WIITE(999,*)"./Go.sh"
 CLOSE(999)
 CMD="sbatch Run.sh"
 CALL SYSTEM(CMD)
