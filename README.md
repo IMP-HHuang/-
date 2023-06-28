@@ -5,6 +5,7 @@
       - 参数 （可以加在提交任务的命令语句上，也可以以（#PBS -q work）的形式写在bash脚本里 （注意：#号不是注释，行首不能有空格））
         - q 指定队列/分区
         - N 任务名称
+        - l nodes=1 节点数
  - 2. qdel JobId (取消任务)
       - [批量取消](./Script)  
  - 3. qstat (查看任务状态)
@@ -12,13 +13,24 @@
        - qsub -q work tesh.sh
        - qdel 1234
        - qstat
+```shell
+#!/bin/bash
+#PBS -q cpu
+#PBS -N  Run
+#PBS -l nodes=1
+#PBS -t 7-00:00:00  #最大运行时间7天0h0min0s
 
+sbatch run.sh
+```
   
 ## [SLURM](https://slurm.schedmd.com/documentation.html)
  - 1. sbatch (提交任务)
        - 参数 （可以加在提交任务的命令语句上，也可以以（#SBATCH -p cpu）的形式写在bash脚本里 （注意：#号不是注释，行首不能有空格））
         - p 指定队列/分区
         - J 任务名称
+        - N 节点数
+        - --cpus-per-task=4 CPU核心
+        - t 最大运行时间
  - 2. scancel JobId (取消任务) 
  - 3. squeue (查看任务状态)
  - 4. [e.g.](http://faculty.bicmr.pku.edu.cn/~wenzw/pages/slurm.html)
@@ -30,6 +42,7 @@
 #SBATCH -p cpu
 #SBATCH -J Run
 #SBATCH -N 1
+#SBATCH --cpus-per-task=4
 #SBATCH -t 7-00:00:00  #最大运行时间7天0h0min0s
 
 sbatch run.sh
