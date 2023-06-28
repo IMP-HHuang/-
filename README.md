@@ -26,7 +26,11 @@
        - scancel 1234
        - squeue
 ```shell
+#!/bin/bash
 #SBATCH -p cpu
 #SBATCH -J Run
 #SBATCH -N 1
+#SBATCH -t 7-00:00:00  #最大运行时间7天0h0min0s
+
+sbatch run.sh
 ```
