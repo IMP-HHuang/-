@@ -14,10 +14,10 @@
        qsub -q work tesh.sh
        ```
        ```shell
-       - qdel 1234
+       qdel 1234
        ```
        ```shell
-       - qstat
+       qstat
        ```
 ```shell
 #!/bin/bash
