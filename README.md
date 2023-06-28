@@ -10,9 +10,15 @@
       - [批量取消](./Script)  
  - 3. qstat (查看任务状态)
  - 4. e.g.
-       - qsub -q work tesh.sh
+       ```shell
+       qsub -q work tesh.sh
+       ```
+       ```shell
        - qdel 1234
+       ```
+       ```shell
        - qstat
+       ```
 ```shell
 #!/bin/bash
 #PBS -q cpu
