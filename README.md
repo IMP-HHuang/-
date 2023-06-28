@@ -6,6 +6,7 @@
         - q 指定队列/分区
         - N 任务名称
         - l nodes=1 节点数
+        - -t 7-00:00:00  最大运行时间7天0h0min0s
  - 2. qdel JobId (取消任务)
       - [批量取消](./Script)  
  - 3. qstat (查看任务状态)
@@ -20,13 +21,13 @@
        ```shell
        qstat
        ```
-   - bash脚本
+   - bash脚本（注意：#号不是注释，行首不能有空格）
 ```shell
 #!/bin/bash
 #PBS -q cpu
 #PBS -N  Run
 #PBS -l nodes=1
-#PBS -t 7-00:00:00  #最大运行时间7天0h0min0s
+#PBS -t 7-00:00:00
 
 qsub run.sh
 ```
@@ -42,7 +43,7 @@ qsub run.sh
  - 2. scancel JobId (取消任务) 
  - 3. squeue (查看任务状态)
  - 4. [e.g.](http://faculty.bicmr.pku.edu.cn/~wenzw/pages/slurm.html)
-   - 终端命令
+   - 终端命令 （注意：#号不是注释，行首不能有空格
       ```shell
       sbatch -p work tesh.sh
       ```
@@ -52,7 +53,7 @@ qsub run.sh
       ```shell
       squeue
       ```
-   - bash脚本
+   - bash脚本（注意：#号不是注释，行首不能有空格）
 ```shell
 #!/bin/bash
 #SBATCH -p cpu
