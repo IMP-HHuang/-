@@ -6,6 +6,10 @@
         - q 指定队列/分区
         - N 任务名称
  - 2. qdel JobId (取消任务)
- - 3. qstat (查看任务状态) 
+ - 3. qstat (查看任务状态)
+ - 4. e.g.
+       - qsub -q work tesh.sh
+       - qdel 1234
+       - qstat 
   
 ## [SLURM](https://slurm.schedmd.com/documentation.html)
