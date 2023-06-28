@@ -20,7 +20,7 @@
         - J 任务名称
  - 2. scancel JobId (取消任务) 
  - 3. squeue (查看任务状态)
- - 4. e.g.
+ - 4. [e.g.](http://faculty.bicmr.pku.edu.cn/~wenzw/pages/slurm.html)
        - sbatch -p work tesh.sh
        - scancel 1234
        - squeue
