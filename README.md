@@ -14,3 +14,13 @@
        - qstat 
   
 ## [SLURM](https://slurm.schedmd.com/documentation.html)
+ - 1. sbatch (提交任务)
+       - 参数 （可以加在提交任务的命令语句上，也可以以（#SBATCH -p cpu）的形式写在bash脚本里 （注意：#号不是注释，行首不能有空格））
+        - p 指定队列/分区
+        - J 任务名称
+ - 2. scancel JobId (取消任务) 
+ - 3. squeue (查看任务状态)
+ - 4. e.g.
+       - sbatch -p work tesh.sh
+       - scancel 1234
+       - squeue
