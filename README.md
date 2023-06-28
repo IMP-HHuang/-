@@ -43,7 +43,7 @@ qsub run.sh
  - 2. scancel JobId (取消任务) 
  - 3. squeue (查看任务状态)
  - 4. [e.g.](http://faculty.bicmr.pku.edu.cn/~wenzw/pages/slurm.html)
-   - 终端命令 （注意：#号不是注释，行首不能有空格
+   - 终端命令 （注意：#号不是注释，行首不能有空格）
       ```shell
       sbatch -p work tesh.sh
       ```
@@ -63,4 +63,10 @@ qsub run.sh
 #SBATCH -t 7-00:00:00  #最大运行时间7天0h0min0s
 
 sbatch run.sh
+```
+  - 5. Fortran 生成脚本
+```fortran
+OPEN(999,FILE="Run.sh")
+WRITE(999,'1a11')"#!/bin/bash"
+WRITE(999,'1a14')"#SBATCH -p cpu
 ```
