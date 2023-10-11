@@ -42,7 +42,8 @@ qsub run.sh
         - t 最大运行时间
  - 2. scancel JobId (取消任务) 
  - 3. squeue (查看任务状态)
- - 4. [e.g.](http://faculty.bicmr.pku.edu.cn/~wenzw/pages/slurm.html)
+ - 4. sacct -u UserName (查看所有任务状态)
+ - 5. [e.g.](http://faculty.bicmr.pku.edu.cn/~wenzw/pages/slurm.html)
    - 终端命令 （注意：#号不是注释，行首不能有空格）
       ```shell
       sbatch -p work tesh.sh
